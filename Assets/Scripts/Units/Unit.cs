@@ -53,24 +53,26 @@ public class Unit : MonoBehaviour
     public NavMeshAgent NavAgent { get { return navAgent; } }
     
     [SerializeField] private Faction faction;
-    
     [SerializeField] private GameObject selectionVisual;
     public GameObject SelectionVisual { get { return selectionVisual; } }
-    
+
     void Awake()
     {
         navAgent = GetComponent<NavMeshAgent>();
     }
     
-    // Start is called before the first frame update
     void Start()
     {
         
-    }
-
-    // Update is called once per frame
+    }// Start is called before the first frame update
+    
     void Update()
     {
         
+    }// Update is called once per frame
+    
+    public void ToggleSelectionVisual(bool flag)
+    {
+        if (selectionVisual != null) selectionVisual.SetActive(flag);
     }
 }
