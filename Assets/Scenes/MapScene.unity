@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 415358851}
   - component: {fileID: 415358850}
   - component: {fileID: 415358849}
+  - component: {fileID: 415358853}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -259,6 +260,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &415358853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415358848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482a0f729178cf24b83b3d0a23081679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectionMarker: {fileID: 5026262390441235739, guid: bee89ce2f1f22e244b89eefaa923de44, type: 3}
 --- !u!1001 &435000678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -467,6 +481,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9571380, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401046350625992382, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
+      propertyPath: m_AutoRepath
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401046350625992382, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
+      propertyPath: m_AutoBraking
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3953759917561552691, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
       propertyPath: selectionVisual
       value: 
@@ -660,6 +686,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3502387930053275899, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1006147330}
+    - targetCorrespondingSourceObject: {fileID: 3502387930053275899, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1006147332}
   m_SourcePrefab: {fileID: 100100000, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
 --- !u!4 &1006147328 stripped
 Transform:
@@ -685,8 +714,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerMask:
     serializedVersion: 2
-    m_Bits: 960
-  curUnit: {fileID: 2000193574}
+    m_Bits: 0
+  curUnit: {fileID: 0}
+--- !u!114 &1006147332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006147329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b06757e9e554eb844a59ae8f8c9f80fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1051888112
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,9 +849,9 @@ GameObject:
   - component: {fileID: 1329425681}
   - component: {fileID: 1329425680}
   - component: {fileID: 1329425679}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GroundPlane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1110,7 +1154,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 90a3836a31445244db4045367f030a61, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1712384838
 GameObject:
@@ -1560,17 +1604,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930363563}
   m_CullTransparentMesh: 1
---- !u!114 &2000193574 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3953759917561552691, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
-  m_PrefabInstance: {fileID: 746031699}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db50e2c4df58a9a46b54930238bbab8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
