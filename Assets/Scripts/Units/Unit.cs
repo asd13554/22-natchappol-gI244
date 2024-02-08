@@ -11,7 +11,6 @@ public enum UnitState
     Attack,
     Die
 }
-
 [Serializable]
 public struct UnitCost
 {

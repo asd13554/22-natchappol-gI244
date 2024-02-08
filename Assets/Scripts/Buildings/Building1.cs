@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Building : Structure
+public class Building1 : Structure
 {
     [SerializeField] private Transform spawnPoint;
     public Transform SpawnPoint { get { return spawnPoint; } }
@@ -27,7 +27,7 @@ public class Building : Structure
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.H))
             ToCreateUnit(0);
 
         if ((recruitList.Count > 0) && (recruitList[0] != null))
@@ -108,6 +108,5 @@ public class Building : Structure
         if (SelectionVisual != null)
             SelectionVisual.SetActive(flag);
     }
-
 
 }

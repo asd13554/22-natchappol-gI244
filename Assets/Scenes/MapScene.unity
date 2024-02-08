@@ -198,6 +198,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3195759}
   m_CullTransparentMesh: 1
+--- !u!4 &27587591 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3701679140996265916, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
+  m_PrefabInstance: {fileID: 186100575}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &148482909
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,24 +454,56 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
+      propertyPath: maxHP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: faction
       value: 
       objectReference: {fileID: 1006147331}
     - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
+      propertyPath: recruitList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: unitPrefabs.Array.size
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
+      propertyPath: recruitList.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
+      propertyPath: recruitList.Array.data[1]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: unitPrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 186328, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
+    - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
+      propertyPath: unitPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 154498, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
+    - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
+      propertyPath: unitPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 186328, guid: a569583d8320fd841b8eae2b0c426cf3, type: 3}
+    - target: {fileID: 2554627523034639257, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.59
+      objectReference: {fileID: 0}
     - target: {fileID: 2554627523034639257, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25
+      value: 16.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701679140996265916, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.51
       objectReference: {fileID: 0}
     - target: {fileID: 3701679140996265916, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.31
+      value: 8.86
       objectReference: {fileID: 0}
     - target: {fileID: 8976531033343582863, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: m_Name
@@ -514,8 +551,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 9152625066814675698, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2002479537}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8976531033343582863, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 750118739}
   m_SourcePrefab: {fileID: 100100000, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
 --- !u!1 &266823174
 GameObject:
@@ -1104,6 +1147,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Soldier
       objectReference: {fileID: 0}
+    - target: {fileID: 186328, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 427352, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5588444
@@ -1114,7 +1161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 427352, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.7297287
+      value: 25.1
       objectReference: {fileID: 0}
     - target: {fileID: 427352, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1144,11 +1191,55 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3953759917561552691, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
+      propertyPath: maxHP
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953759917561552691, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
+      propertyPath: faction
+      value: 
+      objectReference: {fileID: 1006147331}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
+--- !u!1 &750118733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8976531033343582863, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
+  m_PrefabInstance: {fileID: 186100575}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &750118738 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9152625066814675698, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
+  m_PrefabInstance: {fileID: 186100575}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &750118739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750118733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e938a4cc134c190418878276e7a995a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  structureName: 
+  structurePic: {fileID: 0}
+  curHP: 0
+  maxHP: 100
+  faction: {fileID: 1006147331}
+  selectionVisual: {fileID: 0}
+  spawnPoint: {fileID: 27587591}
+  rallyPoint: {fileID: 2002479537}
+  unitPrefabs:
+  - {fileID: 154498, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
+  recruitList: []
+  unitTimer: 0
+  curUnitProgress: 0
+  curUnitWaitTime: 0
 --- !u!1 &922396569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,7 +1630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5581722386184624995, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
       propertyPath: food
-      value: 100
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5581722386184624995, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
       propertyPath: gold
@@ -2762,14 +2853,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712384838}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.9999077, z: -0, w: 0.013588406}
+  m_LocalPosition: {x: -1.1, y: 14.1, z: 46.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 963194228}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 178.443, z: 0}
 --- !u!114 &1712384843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3213,6 +3304,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930363563}
   m_CullTransparentMesh: 1
+--- !u!1 &2002479536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2002479537}
+  m_Layer: 0
+  m_Name: RallyPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2002479537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002479536}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.72, y: 3, z: 16.41}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 750118738}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2144184533
 GameObject:
   m_ObjectHideFlags: 0
