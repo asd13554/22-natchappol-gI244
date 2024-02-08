@@ -460,6 +460,14 @@ PrefabInstance:
       propertyPath: unitPrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 186328, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
+    - target: {fileID: 2554627523034639257, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701679140996265916, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.31
+      objectReference: {fileID: 0}
     - target: {fileID: 8976531033343582863, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: m_Name
       value: Headquarter
