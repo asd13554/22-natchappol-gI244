@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,15 @@ public enum UnitState
     Move,
     Attack,
     Die
+}
+
+[Serializable]
+public struct UnitCost
+{
+    public int food;
+    public int wood;
+    public int gold;
+    public int stone;
 }
 
 public class Unit : MonoBehaviour
@@ -55,6 +65,14 @@ public class Unit : MonoBehaviour
     [SerializeField] private Faction faction;
     [SerializeField] private GameObject selectionVisual;
     public GameObject SelectionVisual { get { return selectionVisual; } }
+    
+    //Unit Cost
+    [SerializeField] private UnitCost unitCost;
+    public UnitCost UnitCost { get { return unitCost; } }
+
+    //time for increasing progress 1% for this unit, less is faster
+    [SerializeField] private float unitWaitTime = 0.1f;
+    public float UnitWaitTime { get { return unitWaitTime; } }
 
     void Awake()
     {

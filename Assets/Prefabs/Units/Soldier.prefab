@@ -5272,7 +5272,13 @@ MonoBehaviour:
   weaponRange: 0
   state: 0
   faction: {fileID: 0}
-  selectionVisual: {fileID: 8635972081605822066, guid: 3459b246c5f521940b0c9a5f433d806b, type: 3}
+  selectionVisual: {fileID: 4395775961521601784}
+  unitCost:
+    food: 50
+    wood: 10
+    gold: 20
+    stone: 0
+  unitWaitTime: 0.1
 --- !u!114 &-8156170819655947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6384,6 +6390,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3459b246c5f521940b0c9a5f433d806b, type: 3}
+--- !u!1 &4395775961521601784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8635972081605822066, guid: 3459b246c5f521940b0c9a5f433d806b, type: 3}
+  m_PrefabInstance: {fileID: 5393566501678381706}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7817181562338366301 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2784905854444710359, guid: 3459b246c5f521940b0c9a5f433d806b, type: 3}
