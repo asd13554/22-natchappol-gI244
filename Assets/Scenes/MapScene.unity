@@ -1213,7 +1213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: unitPrefabs.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: recruitList.Array.data[0]
@@ -1230,7 +1230,7 @@ PrefabInstance:
     - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: unitPrefabs.Array.data[1]
       value: 
-      objectReference: {fileID: 186328, guid: a569583d8320fd841b8eae2b0c426cf3, type: 3}
+      objectReference: {fileID: 154498, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
     - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: unitPrefabs.Array.data[2]
       value: 
