@@ -404,7 +404,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 57903854}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &57903854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,7 +536,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 71709753}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &71709753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1179,6 +1203,10 @@ PrefabInstance:
       propertyPath: faction
       value: 
       objectReference: {fileID: 1006147331}
+    - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
+      propertyPath: isFunctional
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: recruitList.Array.size
       value: 0
@@ -2388,7 +2416,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 573803522}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &573803522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3011,6 +3051,11 @@ MonoBehaviour:
   maxHP: 100
   faction: {fileID: 1006147331}
   selectionVisual: {fileID: 7090799944745911897, guid: a3e3fcc7d0d3d9849b8d2546924d75d3, type: 3}
+  structureCost:
+    food: 0
+    wood: 0
+    gold: 0
+    stone: 0
   spawnPoint: {fileID: 27587591}
   rallyPoint: {fileID: 2002479537}
   unitPrefabs:
@@ -4774,7 +4819,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1059754052}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1059754052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5077,7 +5134,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1198837681}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1198837681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6249,7 +6318,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1457693303}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1457693303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7311,7 +7392,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1756407591}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1756407591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7431,7 +7524,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1772235296}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1772235296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8329,7 +8434,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1989787923}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1989787923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8449,7 +8566,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2000060096}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2000060096
 MonoBehaviour:
   m_ObjectHideFlags: 0
