@@ -279,7 +279,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4820988}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4820988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,11 +330,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4820985}
   m_CullTransparentMesh: 1
---- !u!4 &27587591 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3701679140996265916, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
-  m_PrefabInstance: {fileID: 186100575}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &57903851
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,7 +675,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 79273383}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &79273383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1213,7 +1232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: unitPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: recruitList.Array.data[0]
@@ -1230,11 +1249,11 @@ PrefabInstance:
     - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: unitPrefabs.Array.data[1]
       value: 
-      objectReference: {fileID: 154498, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
+      objectReference: {fileID: 105566, guid: 55b41e9e359b384429cb3ae4f518bca6, type: 3}
     - target: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: unitPrefabs.Array.data[2]
       value: 
-      objectReference: {fileID: 186328, guid: a569583d8320fd841b8eae2b0c426cf3, type: 3}
+      objectReference: {fileID: 154498, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
     - target: {fileID: 2554627523034639257, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.59
@@ -1301,10 +1320,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9152625066814675698, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2002479537}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8976531033343582863, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 750118739}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
 --- !u!1 &209849730
 GameObject:
@@ -1387,7 +1403,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 209849733}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &209849733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2682,7 +2710,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 667214995}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &667214995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2721,11 +2761,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667214992}
   m_CullTransparentMesh: 1
---- !u!1 &667925799 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154498, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
-  m_PrefabInstance: {fileID: 1319931238}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &684496639
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,58 +3058,83 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
---- !u!1 &750118733 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8976531033343582863, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
-  m_PrefabInstance: {fileID: 186100575}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &750118738 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9152625066814675698, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
   m_PrefabInstance: {fileID: 186100575}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &750118739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750118733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e938a4cc134c190418878276e7a995a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  structureName: Headquarter
-  structurePic: {fileID: 0}
-  curHP: 100
-  maxHP: 100
-  faction: {fileID: 1006147331}
-  selectionVisual: {fileID: 7090799944745911897, guid: a3e3fcc7d0d3d9849b8d2546924d75d3, type: 3}
-  structureCost:
-    food: 0
-    wood: 0
-    gold: 0
-    stone: 0
-  spawnPoint: {fileID: 27587591}
-  rallyPoint: {fileID: 2002479537}
-  unitPrefabs:
-  - {fileID: 667925799}
-  recruitList: []
-  unitTimer: 0
-  curUnitProgress: 0
-  curUnitWaitTime: 0
 --- !u!114 &750118743 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -2174158860658268622, guid: b8b1120a7fed54646b7e4b2cbdf9e91e, type: 3}
   m_PrefabInstance: {fileID: 186100575}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750118733}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 49caba924c6110d41b5c1852c192f041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &766485073
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 105566, guid: 55b41e9e359b384429cb3ae4f518bca6, type: 3}
+      propertyPath: m_Name
+      value: Builder
+      objectReference: {fileID: 0}
+    - target: {fileID: 105566, guid: 55b41e9e359b384429cb3ae4f518bca6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 494126, guid: 55b41e9e359b384429cb3ae4f518bca6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.7269378
+      objectReference: {fileID: 0}
+    - target: {fileID: 494126, guid: 55b41e9e359b384429cb3ae4f518bca6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 494126, guid: 55b41e9e359b384429cb3ae4f518bca6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.583626
+      objectReference: {fileID: 0}
+    - target: {fileID: 494126, guid: 55b41e9e359b384429cb3ae4f518bca6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 494126, guid: 55b41e9e359b384429cb3ae4f518bca6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 494126, guid: 55b41e9e359b384429cb3ae4f518bca6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 494126, guid: 55b41e9e359b384429cb3ae4f518bca6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 494126, guid: 55b41e9e359b384429cb3ae4f518bca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 494126, guid: 55b41e9e359b384429cb3ae4f518bca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 494126, guid: 55b41e9e359b384429cb3ae4f518bca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 55b41e9e359b384429cb3ae4f518bca6, type: 3}
 --- !u!1 &795556908
 GameObject:
   m_ObjectHideFlags: 0
@@ -3231,7 +3291,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 802728014}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &802728014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3560,7 +3632,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 858410420}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &858410420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3680,7 +3764,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 860540719}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &860540719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5400,7 +5496,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1310467144}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1310467144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5448,56 +5556,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -2806440337621617894, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
-      propertyPath: curHP
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: -2806440337621617894, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
-      propertyPath: maxHP
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: -2806440337621617894, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
-      propertyPath: armour
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -2806440337621617894, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
       propertyPath: faction
       value: 
       objectReference: {fileID: 1006147331}
-    - target: {fileID: -2806440337621617894, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
-      propertyPath: unitName
-      value: Women
-      objectReference: {fileID: 0}
-    - target: {fileID: -2806440337621617894, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
-      propertyPath: visualRange
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -2806440337621617894, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
-      propertyPath: weaponRange
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -2806440337621617894, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
-      propertyPath: maxWpnDamage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -2806440337621617894, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
-      propertyPath: selectionVisual
-      value: 
-      objectReference: {fileID: 1605481697}
     - target: {fileID: 154498, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
       propertyPath: m_Name
       value: Women
       objectReference: {fileID: 0}
     - target: {fileID: 154498, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 154498, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 154498, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
-      propertyPath: m_TagString
-      value: Unit
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 496956, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5537,10 +5605,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 496956, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9580976, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
-      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6655,11 +6719,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540060563}
   m_CullTransparentMesh: 1
---- !u!1 &1605481697 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 160619160370822574, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
-  m_PrefabInstance: {fileID: 1319931238}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1605968157
 GameObject:
   m_ObjectHideFlags: 0
@@ -7072,7 +7131,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1696535414}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1696535414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8729,7 +8800,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2074136934}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1456951038}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2074136934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8991,6 +9074,7 @@ SceneRoots:
   - {fileID: 922396570}
   - {fileID: 746031699}
   - {fileID: 1319931238}
+  - {fileID: 766485073}
   - {fileID: 1441202475}
   - {fileID: 186100575}
   - {fileID: 377896477}

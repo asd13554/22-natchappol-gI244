@@ -28,6 +28,11 @@ public class Building : Structure
     [SerializeField] private float intoTheGround = 5f;
     public float IntoTheGround { get { return intoTheGround; } }
     
+    private float timer = 0f; //Constructing timer
+    public float Timer { get { return timer; } set { timer = value; } }
+    private float waitTime = 0.5f; //How fast it will be construct, higher is longer
+    public float WaitTime { get { return waitTime; } set { waitTime = value; } }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +41,6 @@ public class Building : Structure
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
-            ToCreateUnit(0);
-
         if ((recruitList.Count > 0) && (recruitList[0] != null))
         {
             unitTimer += Time.deltaTime;
@@ -101,6 +103,7 @@ public class Building : Structure
         recruitList.RemoveAt(0);
 
         Unit unit = unitObj.GetComponent<Unit>();
+        unit.Faction = faction;
         unit.MoveToPosition(rallyPoint.position); //Go to Rally Point
 
         //Add unit into faction's Army
