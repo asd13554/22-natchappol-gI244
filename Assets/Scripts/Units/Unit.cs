@@ -89,9 +89,7 @@ public class Unit : MonoBehaviour
 
         //get components
         if (IsBuilder)
-        {
             builder = GetComponent<Builder>();
-        }
     }
     
     void Start()

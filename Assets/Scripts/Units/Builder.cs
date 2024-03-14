@@ -82,6 +82,7 @@ public class Builder : MonoBehaviour
             showGhost = true;
         }
     }
+
     private void GhostBuildingFollowsMouse()
     {
         if (showGhost)

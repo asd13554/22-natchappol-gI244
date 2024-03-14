@@ -1858,37 +1858,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43890521090373462, guid: 095a5f51ea026f9439e736710ef57082, type: 2}
---- !u!1 &4981633636852389972
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1678913924473586884}
-  m_Layer: 0
-  m_Name: RallyPoint (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1678913924473586884
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4981633636852389972}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.72, y: 3, z: 16.41}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 9152625066814675698}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5110715221647068256
 GameObject:
   m_ObjectHideFlags: 0
@@ -3535,7 +3504,7 @@ Transform:
   m_GameObject: {fileID: 8976531033343582863}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.351347, y: -2.5, z: 13.946266}
+  m_LocalPosition: {x: -2.351347, y: -2.4, z: 13.946266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3543,7 +3512,6 @@ Transform:
   - {fileID: 3701679140996265916}
   - {fileID: 2554627523034639257}
   - {fileID: 4990522488794586059}
-  - {fileID: 1678913924473586884}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-2174158860658268622
@@ -3565,10 +3533,10 @@ MonoBehaviour:
   faction: {fileID: 0}
   selectionVisual: {fileID: 3585951707677949350}
   structureCost:
-    food: 0
-    wood: 0
-    gold: 0
-    stone: 0
+    food: 2
+    wood: 2
+    gold: 2
+    stone: 2
   spawnPoint: {fileID: 3701679140996265916}
   rallyPoint: {fileID: 2554627523034639257}
   unitPrefabs:

@@ -4027,7 +4027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   unitName: Women
-  unitPic: {fileID: 0}
+  unitPic: {fileID: 21300000, guid: 802ef325929fa61429e0fffee8868da9, type: 3}
   curHP: 80
   maxHP: 80
   moveSpeed: 5
