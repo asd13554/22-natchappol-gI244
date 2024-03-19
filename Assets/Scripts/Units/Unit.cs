@@ -13,6 +13,7 @@ public enum UnitState
     BuildProgress,
     MoveToResource,
     Gather,
+    Mining,
     DeliverToHQ,
     StoreAtHQ,
     Die

@@ -420,6 +420,8 @@ MonoBehaviour:
   builder: {fileID: 0}
   isWorker: 1
   worker: {fileID: 0}
+  pathUpdateRate: 1
+  lastPathUpdateTime: 0
 --- !u!114 &1617325944179016930
 MonoBehaviour:
   m_ObjectHideFlags: 0
