@@ -16,18 +16,6 @@ public class InfoManager : MonoBehaviour
         instance = this;
     }
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     private void SetPic(Sprite pic)
     {
         unitPic.color = Color.white;
@@ -95,6 +83,15 @@ public class InfoManager : MonoBehaviour
         nameTxt.text = r.RsrcName;
         hpIcon.color = Color.white;
         hpTxt.text = $"{r.Quantity}/{r.MaxQuantity}";
+    }
+
+    public void ShowEnemyAllInfo(Unit unit)
+    {
+        SetPic(unit.UnitPic);
+        nameTxt.text = unit.UnitName;
+
+        hpIcon.color = Color.white;
+        hpTxt.text = $"{unit.CurHP}/{unit.MaxHP}";
     }
 
 }

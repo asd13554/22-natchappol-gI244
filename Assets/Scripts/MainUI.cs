@@ -9,12 +9,15 @@ public class MainUI : MonoBehaviour
     [SerializeField] private GameObject selectionMarker;
     public GameObject SelectionMarker { get { return selectionMarker; } }
     public static MainUI instance;
+    [SerializeField] private RectTransform selectionBox;
+    public RectTransform SelectionBox { get { return selectionBox; } }
 
     [SerializeField] private TextMeshProUGUI unitCountText;
     [SerializeField] private TextMeshProUGUI foodText;
     [SerializeField] private TextMeshProUGUI woodText;
     [SerializeField] private TextMeshProUGUI goldText;
     [SerializeField] private TextMeshProUGUI stoneText;
+    
 
     private void Awake()
     {

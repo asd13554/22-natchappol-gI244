@@ -5,15 +5,19 @@ using UnityEngine.EventSystems;
 
 public class UnitSelect : MonoBehaviour
 {
-    [SerializeField] private LayerMask layerMask; 
-    [SerializeField] private Unit curUnit; 
-    //current selected single unit
+    [SerializeField] private LayerMask layerMask;
+
+    [SerializeField] 
+    private List<Unit> curUnits = new List<Unit>();
+    public List<Unit> CurUnits { get { return curUnits; } }
+    //current selected unit
+    
+    [SerializeField]
+    private Unit curEnemy;
     
     [SerializeField]
     private Building curBuilding; //current selected single building
     public Building CurBuilding { get { return curBuilding; } }
-    
-    public Unit CurUnit { get { return curUnit; } }
     
     private Camera cam; 
     private Faction faction; 
@@ -22,6 +26,12 @@ public class UnitSelect : MonoBehaviour
     
     [SerializeField]
     private ResourceSource curResource; //current selected resource
+    
+    [SerializeField]
+    private RectTransform selectionBox;
+    private Vector2 oldAnchoredPos;//Box old anchored position
+    private Vector2 startPos;//point where mouse is down
+
     void Awake()
     {
         faction = GetComponent<Faction>(); 
@@ -31,6 +41,8 @@ public class UnitSelect : MonoBehaviour
     {
         cam = Camera.main; 
         layerMask = LayerMask.GetMask("Unit", "Building", "Resource", "Ground");
+
+        selectionBox = MainUI.instance.SelectionBox;
         
         instance = this;
     }
@@ -40,32 +52,45 @@ public class UnitSelect : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            startPos = Input.mousePosition;
+            
             if (EventSystem.current.IsPointerOverGameObject())
-            {
                 return;
-            }
             
             ClearEverything();
         } // mouse up
 
+        if (Input.GetMouseButton(0))
+        {
+            UpdateSelectionBox(Input.mousePosition);
+        }
         
         if (Input.GetMouseButtonUp(0))
         {
+            ReleaseSelectionBox(Input.mousePosition);
             TrySelect(Input.mousePosition);
         }
     }
     
     private void SelectUnit(RaycastHit hit) 
     {
-        curUnit = hit.collider.GetComponent<Unit>(); 
-        curUnit.ToggleSelectionVisual(true); 
+        Unit unit = hit.collider.GetComponent<Unit>();
         Debug.Log("Selected Unit");
 
-        if (GameManager.instance.MyFaction.IsMyUnit(curUnit))
+        if (GameManager.instance.MyFaction.IsMyUnit(unit))
         {
-            ShowUnit(curUnit);
+            curUnits.Add(unit);
+            unit.ToggleSelectionVisual(true);
+            ShowUnit(unit);
         }
-    }
+        else
+        {
+            //single enemy
+            curEnemy = unit;
+            curEnemy.ToggleSelectionVisual(true);
+            ShowEnemyUnit(unit);
+        }
+    }//
     
     private void TrySelect(Vector2 screenPos) 
     { 
@@ -85,35 +110,33 @@ public class UnitSelect : MonoBehaviour
                     break;
             }
         } 
-    }
+    }//
 
     private void ClearAllSelectionVisual()
     {
-        if (curUnit != null)
+        foreach (Unit u in CurUnits)
         {
-            curUnit.ToggleSelectionVisual(false);
+            u.ToggleSelectionVisual(false);
         }
+        
         if (curBuilding != null)
-        {
             curBuilding.ToggleSelectionVisual(false);
-        }
-
         if (curResource != null)
-        {
             curResource.ToggleSelectionVisual(false);
-        }
-    }
+        if (curEnemy != null)
+            curEnemy.ToggleSelectionVisual(false);
+    }//
 
     private void ClearEverything()
     {
         ClearAllSelectionVisual(); 
-        curUnit = null;
+        curUnits.Clear();
         curBuilding = null;
         
         //Clear UI
         InfoManager.instance.ClearAllInfo();
         ActionManager.instance.ClearAllInfo();
-    }
+    }//
     
     private void ShowUnit(Unit u)
     {
@@ -123,13 +146,13 @@ public class UnitSelect : MonoBehaviour
         {
             ActionManager.instance.ShowBuilderMode(u);
         }
-    }
+    }//
     
     private void ShowBuilding(Building b)
     {
         InfoManager.instance.ShowAllInfo(b);
         ActionManager.instance.ShowCreateUnitMode(b);
-    }
+    }//
 
     private void BuildingSelect(RaycastHit hit)
     {
@@ -158,5 +181,52 @@ public class UnitSelect : MonoBehaviour
         curResource.ToggleSelectionVisual(true);
         ShowResource();//Show resource info
     }
+    
+    private void UpdateSelectionBox(Vector3 mousePos)
+    {
+        //Debug.Log("Mouse Pos - " + curMousePos);
+        if (!selectionBox.gameObject.activeInHierarchy && curBuilding == null)
+            selectionBox.gameObject.SetActive(true);
 
+        float width = mousePos.x - startPos.x;
+        float height = mousePos.y - startPos.y;
+
+        selectionBox.sizeDelta = new Vector2(Mathf.Abs(width), Mathf.Abs(height));
+        selectionBox.anchoredPosition = startPos + new Vector2(width / 2, height / 2);
+
+        //store old position for real unit selection
+        oldAnchoredPos = selectionBox.anchoredPosition;
+    }
+
+    private void ReleaseSelectionBox(Vector2 mousePos)
+    {
+        //Debug.Log("Step 2 - " + _doubleClickMode);
+        Vector2 min; //down-left corner
+        Vector2 max; //top-right corner
+
+        selectionBox.gameObject.SetActive(false);
+
+        min = oldAnchoredPos - (selectionBox.sizeDelta / 2);
+        max = oldAnchoredPos + (selectionBox.sizeDelta / 2);
+
+        //Debug.Log("min = " + min);
+        //Debug.Log("max = " + max);
+
+        foreach (Unit unit in GameManager.instance.MyFaction.AliveUnits)
+        {
+            Vector2 unitPos = cam.WorldToScreenPoint(unit.transform.position);
+
+            if (unitPos.x > min.x && unitPos.x < max.x && unitPos.y > min.y && unitPos.y < max.y)
+            {
+                curUnits.Add(unit);
+                unit.ToggleSelectionVisual(true);
+            }
+        }
+        selectionBox.sizeDelta = new Vector2(0, 0); //clear Selection Box's size;
+    }
+
+    private void ShowEnemyUnit(Unit u)
+    {
+        InfoManager.instance.ShowEnemyAllInfo(u);
+    }
 }

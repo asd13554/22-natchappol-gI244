@@ -3908,6 +3908,7 @@ GameObject:
   - component: {fileID: -2672666904227890382}
   - component: {fileID: -2806440337621617894}
   - component: {fileID: 3441089015723622095}
+  - component: {fileID: -1594686980869477412}
   m_Layer: 6
   m_Name: Women
   m_TagString: Unit
@@ -3957,7 +3958,7 @@ Animator:
   m_GameObject: {fileID: 154498}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 409520c9226982345a49c9803624f208, type: 3}
-  m_Controller: {fileID: 9100000, guid: 63e8a22bde8906241882fa79181baeef, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6865272a873f79442bb1f59ae2c94eac, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4047,6 +4048,14 @@ MonoBehaviour:
   unitWaitTime: 0.1
   isBuilder: 0
   builder: {fileID: 0}
+  isWorker: 0
+  worker: {fileID: 0}
+  pathUpdateRate: 1
+  lastPathUpdateTime: 0
+  curEnemyUnitTarget: {fileID: 0}
+  attackRate: 1
+  lastAttackTime: 0
+  defendRange: 30
 --- !u!114 &3441089015723622095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4057,6 +4066,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8dd1fb58a845474bbb47f311287dff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1594686980869477412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ff770e1e41d704a871aba86f744e89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &155098

@@ -29,9 +29,9 @@ public class UnitAnimation : MonoBehaviour
         anim.SetBool("IsBuildProgress", false);
         anim.SetBool("IsMoveToResource", false);
         anim.SetBool("IsGather", false);
-        anim.SetBool("IsDeliverToHQ", false);
-        anim.SetBool("IsMining", false);
-        
+        anim.SetBool("IsMoveToEnemy", false);
+        anim.SetBool("IsDie",false);
+
         switch (u.State)
         {
             case UnitState.Idle:
@@ -40,7 +40,7 @@ public class UnitAnimation : MonoBehaviour
             case UnitState.Move:
                 anim.SetBool("IsMove", true);
                 break;
-            case UnitState.Attack:
+            case UnitState.AttackUnit:
                 anim.SetBool("IsAttack", true);
                 break;
             case UnitState.MoveToBuild:
@@ -58,10 +58,13 @@ public class UnitAnimation : MonoBehaviour
             case UnitState.DeliverToHQ:
                 anim.SetBool("IsDeliverToHQ", true);
                 break;
-            case UnitState.Mining:
-                anim.SetBool("IsMining", true);
+            case UnitState.MoveToEnemy:
+                anim.SetBool("IsMoveToEnemy", true);
                 break;
-            
+            case UnitState.Die:
+                anim.SetBool("IsDie", true);
+                break;
+
         }
     }
 }
