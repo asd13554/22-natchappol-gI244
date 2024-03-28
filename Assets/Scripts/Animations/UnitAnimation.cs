@@ -30,6 +30,8 @@ public class UnitAnimation : MonoBehaviour
         anim.SetBool("IsMoveToResource", false);
         anim.SetBool("IsGather", false);
         anim.SetBool("IsMoveToEnemy", false);
+        anim.SetBool("IsMoveToEnemyBuilding", false);
+        anim.SetBool("IsAttackBuilding", false);
         anim.SetBool("IsDie",false);
 
         switch (u.State)
@@ -60,6 +62,12 @@ public class UnitAnimation : MonoBehaviour
                 break;
             case UnitState.MoveToEnemy:
                 anim.SetBool("IsMoveToEnemy", true);
+                break;
+            case UnitState.MoveToEnemyBuilding:
+                anim.SetBool("IsMoveToEnemyBuilding", true);
+                break;
+            case UnitState.AttackBuilding:
+                anim.SetBool("IsAttackBuilding", true);
                 break;
             case UnitState.Die:
                 anim.SetBool("IsDie", true);

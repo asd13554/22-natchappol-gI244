@@ -39,7 +39,6 @@ public abstract class Structure : MonoBehaviour
     private StructureCost structureCost;
     public StructureCost StructureCost { get { return structureCost; } set { structureCost = value; } }
     
-
     void Start()
     {
         
@@ -50,4 +49,17 @@ public abstract class Structure : MonoBehaviour
     {
         
     }// Update is called once per frame
+    
+    protected void Die()
+    {
+        InfoManager.instance.ClearAllInfo();
+        Destroy(gameObject);
+    }
+    
+    public void TakeDamage(int damage)
+    {
+        curHP -= damage;
+        if (curHP <= 0)
+            Die();
+    }
 }

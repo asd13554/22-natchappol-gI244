@@ -16,6 +16,8 @@ public enum UnitState
     DeliverToHQ,
     StoreAtHQ,
     MoveToEnemy,
+    MoveToEnemyBuilding,
+    AttackBuilding,
     Die
 }
 [Serializable]
@@ -105,6 +107,9 @@ public class Unit : MonoBehaviour
     
     [SerializeField]
     private Unit curEnemyUnitTarget;
+    
+    [SerializeField]
+    private Building curEnemyBuildingTarget;
 
     [SerializeField]
     private float attackRate = 1f; //how frequent this unit attacks in second
@@ -138,6 +143,10 @@ public class Unit : MonoBehaviour
             case UnitState.MoveToEnemy: MoveToEnemyUpdate(); 
                 break;
             case UnitState.AttackUnit: AttackUpdate(); 
+                break;
+            case UnitState.MoveToEnemyBuilding: MoveToEnemyBuildingUpdate(); 
+                break;
+            case UnitState.AttackBuilding: AttackBuildingUpdate(); 
                 break;
         }
     }// Update is called once per frame
@@ -288,5 +297,95 @@ public class Unit : MonoBehaviour
             //Debug.Log($"{unitName} - From Attack Update");
         }
     }
+    
+    // move to an enemy building and attack them
+    public void ToAttackBuilding(Building target)
+    {
+        curEnemyBuildingTarget = target;
+        SetState(UnitState.MoveToEnemyBuilding);
+    }
+    
+    // called every frame the 'MoveToEnemyBuilding' state is active
+    private void MoveToEnemyBuildingUpdate()
+    {
+        if (curEnemyBuildingTarget == null)
+        {
+            SetState(UnitState.Idle);
+            return;
+        }
+
+        if (Time.time - lastPathUpdateTime > pathUpdateRate)
+        {
+            lastPathUpdateTime = Time.time;
+            navAgent.isStopped = false;
+            navAgent.SetDestination(curEnemyBuildingTarget.transform.position);
+        }
+        if ((Vector3.Distance(transform.position, curEnemyBuildingTarget.transform.position) - 4f) <= WeaponRange)
+        {
+            SetState(UnitState.AttackBuilding);
+        }
+    }
+    
+    // called every frame the 'AttackBuilding' state is active
+    private void AttackBuildingUpdate()
+    {
+        // if our target is dead, go idle
+        if (curEnemyBuildingTarget == null)
+        {
+            SetState(UnitState.Idle);
+            return;
+        }
+
+        // if we're still moving, stop
+        if (!navAgent.isStopped)
+        {
+            navAgent.isStopped = true;
+        }
+
+        // look at the enemy
+        LookAt(curEnemyBuildingTarget.transform.position);
+
+        // attack every 'attackRate' seconds
+        if (Time.time - lastAttackTime > attackRate)
+        {
+            lastAttackTime = Time.time;
+
+            curEnemyBuildingTarget.TakeDamage(UnityEngine.Random.Range(minWpnDamage, maxWpnDamage + 1));
+        }
+        // if we're too far away, move towards the enemy's building
+        if ((Vector3.Distance(transform.position, curEnemyBuildingTarget.transform.position) - 4f) > WeaponRange)
+        {
+            SetState(UnitState.MoveToEnemyBuilding);
+        }
+    }
+
+    // move to an enemy turret and attack them
+    public void ToAttackTurret(Turret turret)
+    {
+        if (curHP <= 0 || state == UnitState.Die)
+            return;
+        curEnemyBuildingTarget = turret;
+        SetState(UnitState.MoveToEnemyBuilding);
+    }
+    
+    // called when an enemy turret attacks us
+    public void TakeDamage(Turret turret, int damage)
+    {
+        //I'm already dead
+        if (curHP <= 0 || state == UnitState.Die)
+            return;
+
+        curHP -= damage;
+
+        if (curHP <= 0)
+        {
+            curHP = 0;
+            Die();
+        }
+
+        if (!IsWorker) //if this unit is not worker
+            ToAttackTurret(turret); //counter-attack at turret
+    }
+    
     
 }

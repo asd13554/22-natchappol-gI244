@@ -1668,6 +1668,8 @@ MonoBehaviour:
   curUnitWaitTime: 0
   isFunctional: 0
   isHQ: 0
+  isHousing: 0
+  isBarrack: 0
   intoTheGround: 5
 --- !u!1 &3586353639537128169
 GameObject:
@@ -3489,7 +3491,7 @@ GameObject:
   - component: {fileID: 2675655270549269356}
   - component: {fileID: 6469163541727849150}
   m_Layer: 8
-  m_Name: Headquarter
+  m_Name: Br_Barrack
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3541,14 +3543,14 @@ MonoBehaviour:
   rallyPoint: {fileID: 2554627523034639257}
   unitPrefabs:
   - {fileID: 186328, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
-  - {fileID: 105566, guid: 55b41e9e359b384429cb3ae4f518bca6, type: 3}
-  - {fileID: 154498, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
   recruitList: []
   unitTimer: 0
   curUnitProgress: 0
   curUnitWaitTime: 0
-  isFunctional: 1
-  isHQ: 1
+  isFunctional: 0
+  isHQ: 0
+  isHousing: 0
+  isBarrack: 1
   intoTheGround: 5
 --- !u!65 &8993794003166467213
 BoxCollider:
