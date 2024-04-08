@@ -39,10 +39,6 @@ public class Building : Structure
     private float waitTime = 0.5f; //How fast it will be construct, higher is longer
     public float WaitTime { get { return waitTime; } set { waitTime = value; } }
     
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()
@@ -57,7 +53,7 @@ public class Building : Structure
                 curUnitProgress++;
                 unitTimer = 0f;
 
-                if (curUnitProgress >= 40 && (faction.AliveUnits.Count < faction.UnitLimit))
+                if (curUnitProgress >= 100 && (faction.AliveUnits.Count < faction.UnitLimit))
                 {
                     curUnitProgress = 0;
                     curUnitWaitTime = 0f;
@@ -151,4 +147,5 @@ public class Building : Structure
 
         //Check Victory Condition
     }
+
 }

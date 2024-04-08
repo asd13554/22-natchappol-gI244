@@ -63,7 +63,7 @@ public class Faction : MonoBehaviour
     
     private int unitLimit = 6; //Initial unit limit
     public int UnitLimit { get { return unitLimit; } }
-    private int housingUnitNum = 5; //number of units per each housing
+    private int housingUnitNum = 6; //number of units per each housing
     public int HousingUnitNum { get { return housingUnitNum; } }
 
     
@@ -72,12 +72,7 @@ public class Faction : MonoBehaviour
     {
         UpdateHousingLimit();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public bool CheckUnitCost(Unit unit)
     {
         if (food < unit.UnitCost.food)
@@ -94,6 +89,7 @@ public class Faction : MonoBehaviour
 
         return true;
     }
+    
     public void DeductUnitCost(Unit unit)
     {
         food -= unit.UnitCost.food;
@@ -127,6 +123,7 @@ public class Faction : MonoBehaviour
 
         return true;
     }
+    
     public void DeductBuildingCost(Building building)
     {
         food -= building.StructureCost.food;
@@ -141,8 +138,10 @@ public class Faction : MonoBehaviour
         {
             if (b == null)
                 continue;
+            
             if (b.IsHQ)
                 return b.SpawnPoint.position;
+            
         }
         return startPosition.position;
     }
@@ -228,7 +227,7 @@ public class Faction : MonoBehaviour
         if (this == GameManager.instance.MyFaction)
             MainUI.instance.UpdateAllResource(this);
     }
-
+    
     public bool CheckUnitCost(int i)
     {
         Unit unit = unitPrefabs[i].GetComponent<Unit>();
@@ -250,4 +249,5 @@ public class Faction : MonoBehaviour
 
         return true;
     }
+    
 }

@@ -57,6 +57,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: f81a978cf85038f41a62cf0aad8c2981, type: 2}
     - target: {fileID: 3953759917561552691, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
+      propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953759917561552691, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
       propertyPath: unitPic
       value: 
       objectReference: {fileID: 21300000, guid: 8e38e7404af772e4e8428dc2a2ab170e, type: 3}

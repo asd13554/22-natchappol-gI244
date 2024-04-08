@@ -23,7 +23,6 @@ public class AICreateHouse : AICreateHQ
         }
         return false;
     }
-    
     public override float GetWeight()
     {
         Building b = buildingPrefab.GetComponent<Building>();
@@ -45,4 +44,5 @@ public class AICreateHouse : AICreateHQ
 
         return 0;
     }
+
 }

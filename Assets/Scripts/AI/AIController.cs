@@ -11,7 +11,7 @@ public class AIController : MonoBehaviour
 
     private AISupport AiSupport;
     private List<AIBehaviour> AIs = new List<AIBehaviour>();
-    
+
     [SerializeField]
     private AIBehaviour bestAI;
 
@@ -34,7 +34,7 @@ public class AIController : MonoBehaviour
         {
             return;
         }
-        
+
         //Debug.Log("AI Controller");
 
         bestAI = null;
@@ -63,5 +63,4 @@ public class AIController : MonoBehaviour
 
         waited = 0;
     }
-
 }

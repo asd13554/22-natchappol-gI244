@@ -21,6 +21,7 @@ public class FactionAI : MonoBehaviour
     {
         faction = GetComponent<Faction>();
     }
+
     
     // Start is called before the first frame update
     void Start()
@@ -56,9 +57,10 @@ public class FactionAI : MonoBehaviour
         }
         
         UpdateImportantBuilding();
-        WorkerFindResource(ResourceType.Wood, 3);
-        WorkerFindResource(ResourceType.Food, 2);
+        WorkerFindResource(ResourceType.Wood,3);
+        WorkerFindResource(ResourceType.Food,2);
     }
+
     
     private void UpdateImportantBuilding()
     {

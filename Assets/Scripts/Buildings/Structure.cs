@@ -39,17 +39,6 @@ public abstract class Structure : MonoBehaviour
     private StructureCost structureCost;
     public StructureCost StructureCost { get { return structureCost; } set { structureCost = value; } }
     
-    void Start()
-    {
-        
-    }// Start is called before the first frame update
-
-    
-    void Update()
-    {
-        
-    }// Update is called once per frame
-    
     protected virtual void Die()
     {
         InfoManager.instance.ClearAllInfo();

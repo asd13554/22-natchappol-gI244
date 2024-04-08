@@ -101,8 +101,7 @@ public class AICreateHQ : AIBehaviour
 
                 float Corner1PosX = CameraController.instance.Corner1.position.x;
                 float Corner2PosX = CameraController.instance.Corner2.position.x;
-                float Corner1PosZ = 
-                    CameraController.instance.Corner1.position.z;
+                float Corner1PosZ =CameraController.instance.Corner1.position.z;
                 float Corner2PosZ = CameraController.instance.Corner2.position.z;
 
                 //Clamp pos to be in a map
@@ -118,6 +117,5 @@ public class AICreateHQ : AIBehaviour
             }
         }
     }
-
 
 }

@@ -11,7 +11,6 @@ public class AICreateBarrack : AICreateHQ
         buildingPrefab = support.Faction.BuildingPrefabs[3];
         buildingGhostPrefab = support.Faction.GhostBuildingPrefabs[3];
     }
-
     private bool CheckIfAnyUnfinishedHouseAndBarrack()
     {
         foreach (GameObject houseObj in support.Houses)
@@ -48,5 +47,4 @@ public class AICreateBarrack : AICreateHQ
 
         return 0;
     }
-    
 }
