@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 4840287862152323111}
   - component: {fileID: 6165458192427547344}
   - component: {fileID: -6271113088491222140}
+  - component: {fileID: 875493199799960754}
   m_Layer: 6
   m_Name: Fr_Builder
   m_TagString: Unit
@@ -406,7 +407,7 @@ MonoBehaviour:
   minWpnDamage: 0
   maxWpnDamage: 12
   armour: 0
-  visualRange: 20
+  visualRange: 60
   weaponRange: 15
   state: 0
   faction: {fileID: 0}
@@ -495,6 +496,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71ff770e1e41d704a871aba86f744e89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &875493199799960754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75f88ee602c511644864f67b14821e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &106418

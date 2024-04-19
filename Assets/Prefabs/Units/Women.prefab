@@ -3909,6 +3909,7 @@ GameObject:
   - component: {fileID: -2806440337621617894}
   - component: {fileID: 3441089015723622095}
   - component: {fileID: -1594686980869477412}
+  - component: {fileID: 6280379188269848329}
   m_Layer: 6
   m_Name: Women
   m_TagString: Unit
@@ -4035,7 +4036,7 @@ MonoBehaviour:
   minWpnDamage: 0
   maxWpnDamage: 1
   armour: 1
-  visualRange: 1
+  visualRange: 60
   weaponRange: 1
   state: 0
   faction: {fileID: 0}
@@ -4053,6 +4054,7 @@ MonoBehaviour:
   pathUpdateRate: 1
   lastPathUpdateTime: 0
   curEnemyUnitTarget: {fileID: 0}
+  curEnemyBuildingTarget: {fileID: 0}
   attackRate: 1
   lastAttackTime: 0
   defendRange: 30
@@ -4078,6 +4080,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71ff770e1e41d704a871aba86f744e89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6280379188269848329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75f88ee602c511644864f67b14821e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &155098
