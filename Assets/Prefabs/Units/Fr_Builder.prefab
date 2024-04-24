@@ -281,6 +281,7 @@ GameObject:
   - component: {fileID: 6165458192427547344}
   - component: {fileID: -6271113088491222140}
   - component: {fileID: 875493199799960754}
+  - component: {fileID: -3667871436932202563}
   m_Layer: 6
   m_Name: Fr_Builder
   m_TagString: Unit
@@ -422,6 +423,8 @@ MonoBehaviour:
   builder: {fileID: 0}
   isWorker: 1
   worker: {fileID: 0}
+  isDocter: 0
+  docter: {fileID: 0}
   pathUpdateRate: 1
   lastPathUpdateTime: 0
   curEnemyUnitTarget: {fileID: 0}
@@ -510,6 +513,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f88ee602c511644864f67b14821e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3667871436932202563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec185bd020082243b843e9c2977cebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inProgressHealing: {fileID: 0}
 --- !u!1 &106418
 GameObject:
   m_ObjectHideFlags: 0

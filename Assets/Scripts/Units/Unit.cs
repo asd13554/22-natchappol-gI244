@@ -18,7 +18,9 @@ public enum UnitState
     MoveToEnemy,
     MoveToEnemyBuilding,
     AttackBuilding,
-    Die
+    Die,
+    MoveToHeal,
+    HealProgress
 }
 [Serializable]
 public struct UnitCost
@@ -84,6 +86,7 @@ public class Unit : MonoBehaviour
     [SerializeField] private float unitWaitTime = 0.1f;
     public float UnitWaitTime { get { return unitWaitTime; } }
     
+    //Builder
     [SerializeField] private bool isBuilder;
     public bool IsBuilder { get { return isBuilder; } set { isBuilder = value; } }
 
@@ -96,6 +99,13 @@ public class Unit : MonoBehaviour
 
     [SerializeField] private Worker worker;
     public Worker Worker { get { return worker; } }
+    
+    //Docter
+    [SerializeField] private bool isDocter;
+    public bool IsDocter { get { return isDocter; } set { isDocter = value; } }
+    
+    [SerializeField] private Docter docter;
+    public Docter Docter { get { return docter; } }
     
     [SerializeField]
     private float pathUpdateRate = 1.0f;
@@ -120,9 +130,7 @@ public class Unit : MonoBehaviour
     //Auto Attack
     [SerializeField] private float defendRange = 30f; //the range that a unit will defensively auto-attack
     public float DefendRange { get { return defendRange; } }
-
     
-
     void Awake()
     {
         navAgent = GetComponent<NavMeshAgent>();
@@ -132,6 +140,8 @@ public class Unit : MonoBehaviour
             builder = GetComponent<Builder>();
         if (IsWorker)
             worker = GetComponent<Worker>();
+        if (IsDocter)
+            docter = GetComponent<Docter>();
     }
     
     void Update()
@@ -172,7 +182,7 @@ public class Unit : MonoBehaviour
         {
             navAgent.SetDestination(dest); 
             navAgent.isStopped = false;
-        } 
+        }
         
         SetState(UnitState.Move);
     }
@@ -223,7 +233,7 @@ public class Unit : MonoBehaviour
         curEnemyUnitTarget = target;
         SetState(UnitState.MoveToEnemy);
     }
-
+    
     // called when an enemy unit attacks us
     public void TakeDamage(Unit enemy, int damage)
     {

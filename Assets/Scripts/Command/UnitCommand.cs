@@ -112,6 +112,15 @@ public class UnitCommand : MonoBehaviour
 
         if (target.Faction == GameManager.instance.EnemyFaction)// if it is our enemy
             UnitAttackEnemy(target, units);
+        else
+        {
+            if (target.CurHP < target.MaxHP)
+            {
+                HelpHealing(target, units);
+                StartCoroutine(Formula.BlinkSelection(target.SelectionVisual));
+            }
+        }
+        
     }
     
     private void UnitAttackEnemyBuilding(Building enemyBuilding, List<Unit> units)
@@ -151,4 +160,12 @@ public class UnitCommand : MonoBehaviour
         }
     }
     
+    private void HelpHealing(Unit ally, List<Unit> units)
+    {
+        foreach (Unit u in units)
+        {
+            if (u.IsDocter)
+                u.Docter.DocterStartHealing(ally);
+        }
+    }
 }

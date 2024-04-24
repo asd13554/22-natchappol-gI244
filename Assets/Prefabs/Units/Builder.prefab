@@ -281,6 +281,7 @@ GameObject:
   - component: {fileID: 6165458192427547344}
   - component: {fileID: -6271113088491222140}
   - component: {fileID: -6600223344540299760}
+  - component: {fileID: 2395909789746441157}
   m_Layer: 6
   m_Name: Builder
   m_TagString: Unit
@@ -401,27 +402,29 @@ MonoBehaviour:
   id: 0
   unitName: Builder
   unitPic: {fileID: 21300000, guid: f48d6a65cf39547409c76ce3e731c3ae, type: 3}
-  curHP: 100
+  curHP: 50
   maxHP: 100
   moveSpeed: 5
   minWpnDamage: 0
-  maxWpnDamage: 12
-  armour: 0
+  maxWpnDamage: 6
+  armour: 1
   visualRange: 60
-  weaponRange: 15
+  weaponRange: 20
   state: 0
   faction: {fileID: 0}
   selectionVisual: {fileID: 3610397494663450451}
   unitCost:
-    food: 1
-    wood: 1
-    gold: 1
-    stone: 1
+    food: 20
+    wood: 20
+    gold: 20
+    stone: 20
   unitWaitTime: 0.1
   isBuilder: 1
   builder: {fileID: 0}
   isWorker: 1
   worker: {fileID: 0}
+  isDocter: 1
+  docter: {fileID: 0}
   pathUpdateRate: 1
   lastPathUpdateTime: 0
   curEnemyUnitTarget: {fileID: 0}
@@ -510,6 +513,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f88ee602c511644864f67b14821e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2395909789746441157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec185bd020082243b843e9c2977cebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inProgressHealing: {fileID: 0}
 --- !u!1 &106418
 GameObject:
   m_ObjectHideFlags: 0
@@ -4260,7 +4276,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f81a978cf85038f41a62cf0aad8c2981, type: 2}
+  - {fileID: 2100000, guid: ce19f20337e1d6545bddd9bc3ba7de65, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

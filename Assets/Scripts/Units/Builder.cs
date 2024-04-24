@@ -247,6 +247,7 @@ public class Builder : MonoBehaviour
             }
         }
     }
+    
     private void OnDestroy()
     {
         if (ghostBuilding != null)
