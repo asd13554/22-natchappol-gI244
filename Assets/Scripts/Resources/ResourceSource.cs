@@ -30,6 +30,9 @@ public class ResourceSource : MonoBehaviour
     [SerializeField] private GameObject selectionVisual;
     public GameObject SelectionVisual { get { return selectionVisual; } }
     
+    [SerializeField] private GameObject selectionInfo;
+    public GameObject SelectionInfo { get { return selectionInfo; } }
+    
     //Selection Ring
     [SerializeField]
     private UnityEvent onRsrcQuantityChange;
@@ -41,7 +44,6 @@ public class ResourceSource : MonoBehaviour
     void Start()
     {
         onRsrcQuantityChange.Invoke();
-        
         //onInfoQuantityChange.AddListener(delegate { InfoManager.instance.ShowEnemyAllInfo(this); });
         //onInfoQuantityChange.AddListener((() => InfoManager.instance.ShowEnemyAllInfo(this)));
     }
@@ -83,6 +85,14 @@ public class ResourceSource : MonoBehaviour
     {
         if (SelectionVisual != null)
             SelectionVisual.SetActive(selected);
+        
+    }
+    
+    public void ToggleSelectionInfo(bool selected)
+    {
+        if (SelectionInfo != null)
+            SelectionInfo.SetActive(selected);
+        
     }
 
 }

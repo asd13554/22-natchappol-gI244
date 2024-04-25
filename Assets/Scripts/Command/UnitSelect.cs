@@ -136,9 +136,12 @@ public class UnitSelect : MonoBehaviour
             curBuilding.ToggleSelectionVisual(false);
         if (curResource != null)
             curResource.ToggleSelectionVisual(false);
+        if (curResource != null)
+            curResource.ToggleSelectionInfo(false);
         if (curEnemy != null)
             curEnemy.ToggleSelectionVisual(false);
     }//
+    
 
     private void ClearEverything()
     {
@@ -198,6 +201,7 @@ public class UnitSelect : MonoBehaviour
             return;
 
         curResource.ToggleSelectionVisual(true);
+        curResource.ToggleSelectionInfo(true);
         ShowResource();//Show resource info
     }
     

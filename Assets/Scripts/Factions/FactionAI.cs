@@ -11,9 +11,9 @@ public class FactionAI : MonoBehaviour
 
     [SerializeField] private Building curHQ;
     [SerializeField] private Building curBarrack;
-    [SerializeField] private Building curHunterLodge;
-
-    //**************************************************************************
+    [SerializeField] private Building curHospital;
+    [SerializeField] private Building curCabin;
+    
     //[SerializeField] private GameObject unfinishedBuilding = null;
 
     [SerializeField] private Unit specificBuilder; //a builder for fixing any unfinished/broken building
@@ -46,6 +46,10 @@ public class FactionAI : MonoBehaviour
                     curHQ.ToCreateUnit(0); //HQ recruits a primary worker/builder
             }
         }
+        else
+        {
+            Debug.Log("End Game Here (FactionAI.cs 51)");
+        }
 
         //Create main fighters
         if (curBarrack != null)
@@ -57,12 +61,34 @@ public class FactionAI : MonoBehaviour
             }
         }
         
+        //Create main docter
+        if (curHospital != null)
+        {
+            if ((support.Dogters.Count < 2))// if there are less than 2 dogter
+            {
+                if (faction.CheckUnitCost(2))
+                    curHospital.ToCreateUnit(0); // recruits dogter
+            }
+        }
+        
+        //Create main scout
+        if (curCabin != null)
+        {
+            if ((support.Scouts.Count < 2))// if there are less than 2 scout
+            {
+                if (faction.CheckUnitCost(3))
+                    curCabin.ToCreateUnit(0); // recruits scout
+            }
+        }
+        
         UpdateImportantBuilding();
         WorkerFindResource(ResourceType.Wood,3);
         WorkerFindResource(ResourceType.Food,2);
+        WorkerFindResource(ResourceType.Stone,3);
+        WorkerFindResource(ResourceType.Gold,2);
     }
 
-    
+    //****************************************************************
     private void UpdateImportantBuilding()
     {
         foreach (Building b in faction.AliveBuildings)
@@ -75,6 +101,12 @@ public class FactionAI : MonoBehaviour
 
             if (b.IsBarrack)
                 curBarrack = b;
+            
+            if (b.IsHospital)
+                curHospital = b;
+            
+            if (b.IsCabin)
+                curCabin = b;
         }
     }
     

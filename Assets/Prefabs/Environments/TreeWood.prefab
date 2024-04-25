@@ -214,6 +214,7 @@ MonoBehaviour:
   quantity: 100
   maxQuantity: 100
   selectionVisual: {fileID: 8843462314283734450}
+  selectionInfo: {fileID: 8698890912045555129}
   onRsrcQuantityChange:
     m_PersistentCalls:
       m_Calls:
@@ -323,6 +324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ResourceUI
       objectReference: {fileID: 0}
+    - target: {fileID: 2440138413133753361, guid: 2773afabf599bfc41bda158640e5589c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2798293762032942279, guid: 2773afabf599bfc41bda158640e5589c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -417,12 +422,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1514577583509595350, guid: 2773afabf599bfc41bda158640e5589c, type: 3}
   m_PrefabInstance: {fileID: 6441756909325660584}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 8698890912045555129}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0a783bfaf315d746ba2145c40656863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8698890912045555129 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2440138413133753361, guid: 2773afabf599bfc41bda158640e5589c, type: 3}
+  m_PrefabInstance: {fileID: 6441756909325660584}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &9200922890448145775 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2798293762032942279, guid: 2773afabf599bfc41bda158640e5589c, type: 3}

@@ -172,6 +172,8 @@ MonoBehaviour:
   isHQ: 0
   isHousing: 0
   isBarrack: 0
+  isHospital: 0
+  isCabin: 0
   intoTheGround: 5
 --- !u!1 &4659679550225317351
 GameObject:
@@ -413,10 +415,12 @@ MonoBehaviour:
   unitTimer: 0
   curUnitProgress: 0
   curUnitWaitTime: 0
-  isFunctional: 1
+  isFunctional: 0
   isHQ: 0
   isHousing: 0
   isBarrack: 0
+  isHospital: 1
+  isCabin: 0
   intoTheGround: 5
 --- !u!65 &8993794003166467213
 BoxCollider:

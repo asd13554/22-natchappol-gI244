@@ -172,6 +172,8 @@ MonoBehaviour:
   isHQ: 0
   isHousing: 0
   isBarrack: 0
+  isHospital: 0
+  isCabin: 0
   intoTheGround: 5
 --- !u!1 &5084486375264483806
 GameObject:
@@ -408,15 +410,17 @@ MonoBehaviour:
   spawnPoint: {fileID: 3701679140996265916}
   rallyPoint: {fileID: 2554627523034639257}
   unitPrefabs:
-  - {fileID: 5684084313938827192, guid: d22505fb8c0e9f040932e128727373c4, type: 3}
+  - {fileID: 154498, guid: 880d2a22855d53e449e4125f1b9688cf, type: 3}
   recruitList: []
   unitTimer: 0
   curUnitProgress: 0
   curUnitWaitTime: 0
-  isFunctional: 1
+  isFunctional: 0
   isHQ: 0
   isHousing: 0
   isBarrack: 0
+  isHospital: 0
+  isCabin: 1
   intoTheGround: 5
 --- !u!65 &8993794003166467213
 BoxCollider:

@@ -167,7 +167,11 @@ MonoBehaviour:
   - {fileID: 8976531033343582863, guid: d5fcf64e2ef1111499dc0443838b5f88, type: 3}
   - {fileID: 8976531033343582863, guid: 63fe222562046e84684839525f125511, type: 3}
   - {fileID: 8976531033343582863, guid: eaeee244827565b4083864c2853b8ff5, type: 3}
-  unitPrefabs: []
+  unitPrefabs:
+  - {fileID: 105566, guid: 55b41e9e359b384429cb3ae4f518bca6, type: 3}
+  - {fileID: 186328, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
+  - {fileID: 105566, guid: 879f8f44058c61e48a6cf2f112a191ac, type: 3}
+  - {fileID: 154498, guid: 9e5bccc893e67ff44a9553b95dafb27b, type: 3}
 --- !u!1 &4061679758228649556
 GameObject:
   m_ObjectHideFlags: 0

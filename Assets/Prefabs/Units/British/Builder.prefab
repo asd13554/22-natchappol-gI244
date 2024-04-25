@@ -422,7 +422,7 @@ MonoBehaviour:
   builder: {fileID: 0}
   isWorker: 1
   worker: {fileID: 0}
-  isDocter: 1
+  isDocter: 0
   docter: {fileID: 0}
   isScout: 0
   scout: {fileID: 0}

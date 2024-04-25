@@ -31,6 +31,12 @@ public class Building : Structure
     [SerializeField] private bool isBarrack ;
     public bool IsBarrack  { get { return isBarrack; } }
     
+    [SerializeField] private bool isHospital ;
+    public bool IsHospital  { get { return isHospital; } }
+    
+    [SerializeField] private bool isCabin ;
+    public bool IsCabin  { get { return isCabin; } }
+    
     [SerializeField] private float intoTheGround = 5f;
     public float IntoTheGround { get { return intoTheGround; } }
     
@@ -53,7 +59,7 @@ public class Building : Structure
                 curUnitProgress++;
                 unitTimer = 0f;
 
-                if (curUnitProgress >= 40 && (faction.AliveUnits.Count < faction.UnitLimit))
+                if (curUnitProgress >= 100 && (faction.AliveUnits.Count < faction.UnitLimit))
                 {
                     curUnitProgress = 0;
                     curUnitWaitTime = 0f;

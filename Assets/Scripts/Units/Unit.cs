@@ -254,10 +254,13 @@ public class Unit : MonoBehaviour
     
     public void ToHealUnit(Unit ally)
     {
-        if (curHP <= 0 || state == UnitState.Die)
-            return;
-        curAllyTarget = ally;
-        SetState(UnitState.MoveToHeal);
+        if (isDocter)
+        {
+            if (curHP <= 0 || state == UnitState.Die)
+                return;
+            curAllyTarget = ally;
+            SetState(UnitState.MoveToHeal);
+        }
     }
     
     // called when an enemy unit attacks us
@@ -288,14 +291,15 @@ public class Unit : MonoBehaviour
 
         curHP += damage;
 
-        if (curHP <= 0)
+        if (CurHP >= MaxHP) //finish
         {
-            curHP = 0;
-            Die();
-        }
+            CurHP = MaxHP;
 
-        if (!IsWorker) //if this unit is not worker and Scout
-            ToAttackUnit(ally); //always counter-attack
+            curAllyTarget = null;
+            inProgressHealing = null; //Clear this job off his mind
+            SetState(UnitState.Idle);
+            return;
+        }
     }
     
     // called every frame the 'MoveToEnemy' state is active
@@ -323,24 +327,27 @@ public class Unit : MonoBehaviour
     
     public void MoveToHeal()
     {
-        // if our target is null, go idle
-        if (curAllyTarget == null)
+        if (IsBuilder)
         {
-            SetState(UnitState.Idle);
-            return;
-        }
-        if (Time.time - lastPathUpdateTime > pathUpdateRate)
-        {
-            lastPathUpdateTime = Time.time;
-            navAgent.isStopped = false;
+            // if our target is null, go idle
+            if (curAllyTarget == null)
+            {
+                SetState(UnitState.Idle);
+                return;
+            }
+            if (Time.time - lastPathUpdateTime > pathUpdateRate)
+            {
+                lastPathUpdateTime = Time.time;
+                navAgent.isStopped = false;
 
-            if (curAllyTarget != null)
-                navAgent.SetDestination(curAllyTarget.transform.position);
+                if (curAllyTarget != null)
+                    navAgent.SetDestination(curAllyTarget.transform.position);
             
-        }
+            }
 
-        if (Vector3.Distance(transform.position, curAllyTarget.transform.position) <= WeaponRange)
-            SetState(UnitState.HealProgress);
+            if (Vector3.Distance(transform.position, curAllyTarget.transform.position) <= WeaponRange)
+                SetState(UnitState.HealProgress);
+        }
     }
     
     protected void HealProgress()
@@ -365,7 +372,7 @@ public class Unit : MonoBehaviour
             lastAttackTime = Time.time;
             curAllyTarget.TakeHeal(this, UnityEngine.Random.Range(minWpnDamage, maxWpnDamage + 1));
         }
-
+        
         // move towards the Ally
         if (Vector3.Distance(transform.position, curAllyTarget.transform.position) > weaponRange)
         {

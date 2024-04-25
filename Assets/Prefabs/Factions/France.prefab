@@ -182,10 +182,7 @@ MonoBehaviour:
   wood: 600
   gold: 500
   stone: 200
-  aliveUnits:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  aliveUnits: []
   aliveBuildings: []
   unitsParent: {fileID: 6707907853006039836}
   buildingsParent: {fileID: 4472550869103967600}
@@ -208,6 +205,9 @@ MonoBehaviour:
   - {fileID: 8976531033343582863, guid: eaeee244827565b4083864c2853b8ff5, type: 3}
   unitPrefabs:
   - {fileID: 105566, guid: 2c93dcca0dbb3b04e93568239327008b, type: 3}
+  - {fileID: 5684084313938827192, guid: d22505fb8c0e9f040932e128727373c4, type: 3}
+  - {fileID: 154498, guid: d40a3c65888cdb04c80e40bd64b01158, type: 3}
+  - {fileID: 154498, guid: 880d2a22855d53e449e4125f1b9688cf, type: 3}
 --- !u!114 &2108276997833207905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +224,6 @@ MonoBehaviour:
   curHQ: {fileID: 0}
   curBarrack: {fileID: 0}
   curHunterLodge: {fileID: 0}
-  unfinishedBuilding: {fileID: 0}
   specificBuilder: {fileID: 0}
 --- !u!114 &2801554798202056450
 MonoBehaviour:

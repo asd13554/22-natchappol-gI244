@@ -3909,7 +3909,7 @@ GameObject:
   - component: {fileID: 3441089015723622095}
   - component: {fileID: -1594686980869477412}
   - component: {fileID: 6280379188269848329}
-  - component: {fileID: -149787071317899817}
+  - component: {fileID: -8337851926868332407}
   m_Layer: 6
   m_Name: Fr_Docter
   m_TagString: Unit
@@ -4033,7 +4033,7 @@ MonoBehaviour:
   curHP: 100
   maxHP: 100
   moveSpeed: 5
-  minWpnDamage: 0
+  minWpnDamage: 1
   maxWpnDamage: 3
   armour: 2
   visualRange: 60
@@ -4047,18 +4047,22 @@ MonoBehaviour:
     gold: 20
     stone: 0
   unitWaitTime: 0.1
-  isBuilder: 0
+  isBuilder: 1
   builder: {fileID: 0}
-  isWorker: 0
+  isWorker: 1
   worker: {fileID: 0}
   isDocter: 1
   docter: {fileID: 0}
+  isScout: 0
+  scout: {fileID: 0}
   pathUpdateRate: 1
   lastPathUpdateTime: 0
   curEnemyUnitTarget: {fileID: 0}
+  curAllyTarget: {fileID: 0}
   curEnemyBuildingTarget: {fileID: 0}
   attackRate: 1
   lastAttackTime: 0
+  inProgressHealing: {fileID: 0}
   defendRange: 30
 --- !u!114 &3441089015723622095
 MonoBehaviour:
@@ -4096,7 +4100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f88ee602c511644864f67b14821e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-149787071317899817
+--- !u!114 &-8337851926868332407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4105,10 +4109,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 154498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec185bd020082243b843e9c2977cebf, type: 3}
+  m_Script: {fileID: 11500000, guid: f8ff1a689cea7be429ecfc522918ac44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inProgressHealing: {fileID: 0}
+  toBuild: 0
+  showGhost: 0
+  buildingList: []
+  ghostBuildingList: []
+  newBuilding: {fileID: 0}
+  ghostBuilding: {fileID: 0}
+  inProgressBuilding: {fileID: 0}
 --- !u!1 &155098
 GameObject:
   m_ObjectHideFlags: 0

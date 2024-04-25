@@ -53,42 +53,42 @@ public class Docter : MonoBehaviour
         
     }
     
-    private void MoveToHeal(Unit b)
-    {
-        if (b == null)
-            return;
-
-        unit.NavAgent.SetDestination(b.transform.position);
-        unit.NavAgent.isStopped = true;
-        
-        HealProgress();
-    }
-    
-    private void HealProgress()
-    {
-        if (inProgressHealing == null)
-            return;
-
-        StartHealing(inProgressHealing);
-        unit.LookAt(inProgressHealing.transform.position);
-        Unit b = inProgressHealing.GetComponent<Unit>();
-        
-        Timer += Time.deltaTime;
-        if (Timer >= WaitTime)
-        {
-            Timer = 0;
-            b.CurHP++;
-            
-            if (b.CurHP >= b.MaxHP) //finish
-            {
-                b.CurHP = b.MaxHP;
-
-                inProgressHealing = null; //Clear this job off his mind
-                unit.SetState(UnitState.Idle);
-                return;
-            }
-        }
-    }
+    // private void MoveToHeal(Unit b)
+    // {
+    //     if (b == null)
+    //         return;
+    //
+    //     unit.NavAgent.SetDestination(b.transform.position);
+    //     unit.NavAgent.isStopped = true;
+    //     
+    //     HealProgress();
+    // }
+    //
+    // private void HealProgress()
+    // {
+    //     if (inProgressHealing == null)
+    //         return;
+    //
+    //     StartHealing(inProgressHealing);
+    //     unit.LookAt(inProgressHealing.transform.position);
+    //     Unit b = inProgressHealing.GetComponent<Unit>();
+    //     
+    //     Timer += Time.deltaTime;
+    //     if (Timer >= WaitTime)
+    //     {
+    //         Timer = 0;
+    //         b.CurHP++;
+    //         
+    //         if (b.CurHP >= b.MaxHP) //finish
+    //         {
+    //             b.CurHP = b.MaxHP;
+    //
+    //             inProgressHealing = null; //Clear this job off his mind
+    //             unit.SetState(UnitState.Idle);
+    //             return;
+    //         }
+    //     }
+    // }
     
     private void OnTriggerStay(Collider other)
     {

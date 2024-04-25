@@ -106,6 +106,7 @@ MonoBehaviour:
   quantity: 100
   maxQuantity: 100
   selectionVisual: {fileID: 4575456521865654442}
+  selectionInfo: {fileID: 792946740666913903}
   onRsrcQuantityChange:
     m_PersistentCalls:
       m_Calls:
@@ -178,6 +179,10 @@ PrefabInstance:
     - target: {fileID: 2440138413133753361, guid: 2773afabf599bfc41bda158640e5589c, type: 3}
       propertyPath: m_Name
       value: ResourceUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440138413133753361, guid: 2773afabf599bfc41bda158640e5589c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2798293762032942279, guid: 2773afabf599bfc41bda158640e5589c, type: 3}
       propertyPath: m_Pivot.x
@@ -280,6 +285,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2773afabf599bfc41bda158640e5589c, type: 3}
+--- !u!1 &792946740666913903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2440138413133753361, guid: 2773afabf599bfc41bda158640e5589c, type: 3}
+  m_PrefabInstance: {fileID: 3088343622020380798}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &867375521299956921 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2798293762032942279, guid: 2773afabf599bfc41bda158640e5589c, type: 3}
@@ -290,7 +300,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1514577583509595350, guid: 2773afabf599bfc41bda158640e5589c, type: 3}
   m_PrefabInstance: {fileID: 3088343622020380798}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 792946740666913903}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0a783bfaf315d746ba2145c40656863, type: 3}

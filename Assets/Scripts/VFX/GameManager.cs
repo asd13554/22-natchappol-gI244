@@ -61,6 +61,8 @@ public class GameManager : MonoBehaviour
                 f.gameObject.AddComponent<AICreateHQ>();
                 f.gameObject.AddComponent<AICreateHouse>();
                 f.gameObject.AddComponent<AICreateBarrack>();
+                f.gameObject.AddComponent<AICreateHospital>();
+                f.gameObject.AddComponent<AICreateCabin>();
             }
         }
     }
