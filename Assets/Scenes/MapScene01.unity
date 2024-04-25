@@ -2873,6 +2873,10 @@ PrefabInstance:
       propertyPath: factions.Array.data[1]
       value: 
       objectReference: {fileID: 5581722386203936780}
+    - target: {fileID: 7316378504395622721, guid: 402783619734a2849870ba8d8b82ff14, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4863,7 +4867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5581722386184624995, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
       propertyPath: unitPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5581722386184624995, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
       propertyPath: aliveBuildings.Array.size
@@ -4878,8 +4882,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 186328, guid: 0e5cc28f70f5efb4e8e391fe69dbbdc1, type: 3}
     - target: {fileID: 5581722386184624995, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
+      propertyPath: unitPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 154498, guid: 4dc16698e8009ee49a0172a4edcd9f1e, type: 3}
+    - target: {fileID: 5581722386184624995, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5581722386184624995, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
       propertyPath: aliveBuildings.Array.data[0]
@@ -4910,8 +4918,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8976531033343582863, guid: ad1a6219da513e54881d318bcf577bcc, type: 3}
     - target: {fileID: 5581722386184624995, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
+      propertyPath: buildingPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 8976531033343582863, guid: 09e0ee20949009c4d97a99919369f65e, type: 3}
+    - target: {fileID: 5581722386184624995, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
+      propertyPath: buildingPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 8976531033343582863, guid: 6f6b6162ec662d24296422c435bbb237, type: 3}
+    - target: {fileID: 5581722386184624995, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
       propertyPath: ghostBuildingPrefabs.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5581722386184624995, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
       propertyPath: ghostBuildingPrefabs.Array.data[0]
@@ -4929,6 +4945,26 @@ PrefabInstance:
       propertyPath: ghostBuildingPrefabs.Array.data[3]
       value: 
       objectReference: {fileID: 8976531033343582863, guid: d5fcf64e2ef1111499dc0443838b5f88, type: 3}
+    - target: {fileID: 5581722386184624995, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
+      propertyPath: ghostBuildingPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 8976531033343582863, guid: 63fe222562046e84684839525f125511, type: 3}
+    - target: {fileID: 5581722386184624995, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
+      propertyPath: ghostBuildingPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 8976531033343582863, guid: eaeee244827565b4083864c2853b8ff5, type: 3}
+    - target: {fileID: 7183957173050418917, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183957173050418917, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183957173050418917, guid: 6a3a59e6cbff15a408ab4dc9d2b86f30, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -6143,7 +6179,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -180, y: 180}
+  m_AnchoredPosition: {x: -180, y: 119}
   m_SizeDelta: {x: 360, y: 360}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1342702883
@@ -6565,7 +6601,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 1000, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1456951036
@@ -9577,7 +9613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1732525048825119145, guid: bfb37df983504394fbc6917cfc528b4c, type: 3}
       propertyPath: unitPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1732525048825119145, guid: bfb37df983504394fbc6917cfc528b4c, type: 3}
       propertyPath: aliveUnits.Array.data[0]
@@ -9612,8 +9648,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5684084313938827192, guid: d22505fb8c0e9f040932e128727373c4, type: 3}
     - target: {fileID: 1732525048825119145, guid: bfb37df983504394fbc6917cfc528b4c, type: 3}
+      propertyPath: unitPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 154498, guid: d40a3c65888cdb04c80e40bd64b01158, type: 3}
+    - target: {fileID: 1732525048825119145, guid: bfb37df983504394fbc6917cfc528b4c, type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1732525048825119145, guid: bfb37df983504394fbc6917cfc528b4c, type: 3}
       propertyPath: aliveBuildings.Array.data[0]
@@ -9640,8 +9680,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8976531033343582863, guid: 1e963527d8647e24196cc447c9131b3e, type: 3}
     - target: {fileID: 1732525048825119145, guid: bfb37df983504394fbc6917cfc528b4c, type: 3}
+      propertyPath: buildingPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 8976531033343582863, guid: a7c8cc2d90248c740aa18291d5801cac, type: 3}
+    - target: {fileID: 1732525048825119145, guid: bfb37df983504394fbc6917cfc528b4c, type: 3}
+      propertyPath: buildingPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 8976531033343582863, guid: f5358f6495d59bf4a97308be171460a6, type: 3}
+    - target: {fileID: 1732525048825119145, guid: bfb37df983504394fbc6917cfc528b4c, type: 3}
       propertyPath: ghostBuildingPrefabs.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1732525048825119145, guid: bfb37df983504394fbc6917cfc528b4c, type: 3}
       propertyPath: ghostBuildingPrefabs.Array.data[0]
@@ -9659,6 +9707,14 @@ PrefabInstance:
       propertyPath: ghostBuildingPrefabs.Array.data[3]
       value: 
       objectReference: {fileID: 8976531033343582863, guid: f601996045b5084478b6a77648cc0a39, type: 3}
+    - target: {fileID: 1732525048825119145, guid: bfb37df983504394fbc6917cfc528b4c, type: 3}
+      propertyPath: ghostBuildingPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 8976531033343582863, guid: a100b6b164d48d841afec7c37c382c03, type: 3}
+    - target: {fileID: 1732525048825119145, guid: bfb37df983504394fbc6917cfc528b4c, type: 3}
+      propertyPath: ghostBuildingPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 8976531033343582863, guid: 544379e0150ff5740bc63541dfc96dde, type: 3}
     - target: {fileID: 2108276997833207905, guid: bfb37df983504394fbc6917cfc528b4c, type: 3}
       propertyPath: curBarrack
       value: 

@@ -186,8 +186,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  aliveBuildings:
-  - {fileID: 0}
+  aliveBuildings: []
   unitsParent: {fileID: 6707907853006039836}
   buildingsParent: {fileID: 4472550869103967600}
   ghostBuildingParent: {fileID: 8146116589397170208}
@@ -198,11 +197,15 @@ MonoBehaviour:
   - {fileID: 8976531033343582863, guid: aee4feaa95351aa41b903b6042eac44b, type: 3}
   - {fileID: 7139765477620692998, guid: a00b4f38472c8d941ac5d1e3575935b6, type: 3}
   - {fileID: 8976531033343582863, guid: 1e963527d8647e24196cc447c9131b3e, type: 3}
+  - {fileID: 8976531033343582863, guid: a7c8cc2d90248c740aa18291d5801cac, type: 3}
+  - {fileID: 8976531033343582863, guid: 6f6b6162ec662d24296422c435bbb237, type: 3}
   ghostBuildingPrefabs:
   - {fileID: 8976531033343582863, guid: 604b8dc0ef226034f84d8cea350a0058, type: 3}
   - {fileID: 8976531033343582863, guid: 5a5bbb1891e078b48a665320546f3345, type: 3}
   - {fileID: 7139765477620692998, guid: 1e856ac6927d16f4b8e5df96ee6e48b3, type: 3}
   - {fileID: 8976531033343582863, guid: f601996045b5084478b6a77648cc0a39, type: 3}
+  - {fileID: 8976531033343582863, guid: a100b6b164d48d841afec7c37c382c03, type: 3}
+  - {fileID: 8976531033343582863, guid: eaeee244827565b4083864c2853b8ff5, type: 3}
   unitPrefabs:
   - {fileID: 105566, guid: 2c93dcca0dbb3b04e93568239327008b, type: 3}
 --- !u!114 &2108276997833207905
