@@ -13,7 +13,8 @@ public class FactionAI : MonoBehaviour
     [SerializeField] private Building curBarrack;
     [SerializeField] private Building curHunterLodge;
 
-    [SerializeField] private GameObject unfinishedBuilding = null;
+    //**************************************************************************
+    //[SerializeField] private GameObject unfinishedBuilding = null;
 
     [SerializeField] private Unit specificBuilder; //a builder for fixing any unfinished/broken building
     

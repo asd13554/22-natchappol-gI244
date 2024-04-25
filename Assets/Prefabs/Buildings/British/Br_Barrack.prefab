@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3536354005721852058}
   - component: {fileID: 4584053472354704715}
   - component: {fileID: 951311147999229278}
-  - component: {fileID: 3939445056730533461}
+  - component: {fileID: 438279588830462576}
   m_Layer: 0
   m_Name: BuildingSelection
   m_TagString: Untagged
@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 3585951707677949350}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.12, y: 0.11, z: -0.11}
+  m_LocalPosition: {x: 0.12, y: 0.57, z: -0.11}
   m_LocalScale: {x: 1.31998, y: 1, z: 0.95447767}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -138,7 +138,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &3939445056730533461
+--- !u!114 &438279588830462576
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -308,11 +308,11 @@ MonoBehaviour:
   unitTimer: 0
   curUnitProgress: 0
   curUnitWaitTime: 0
-  isFunctional: 0
+  isFunctional: 1
   isHQ: 0
   isHousing: 0
   isBarrack: 1
-  intoTheGround: 6
+  intoTheGround: 5
 --- !u!65 &8993794003166467213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -419,7 +419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 406580, guid: c64710ec183cb53439b5bd642a6dfb1d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.35
+      value: 13.59
       objectReference: {fileID: 0}
     - target: {fileID: 406580, guid: c64710ec183cb53439b5bd642a6dfb1d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -469,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 467558, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.02
+      value: 6.2599998
       objectReference: {fileID: 0}
     - target: {fileID: 467558, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
       propertyPath: m_LocalPosition.z

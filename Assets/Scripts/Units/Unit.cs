@@ -20,7 +20,8 @@ public enum UnitState
     AttackBuilding,
     Die,
     MoveToHeal,
-    HealProgress
+    HealProgress,
+    Invisible
 }
 [Serializable]
 public struct UnitCost
@@ -107,6 +108,13 @@ public class Unit : MonoBehaviour
     [SerializeField] private Docter docter;
     public Docter Docter { get { return docter; } }
     
+    //Scout
+    [SerializeField] private bool isScout;
+    public bool IsScout { get { return isScout; } set { isScout = value; } }
+    
+    [SerializeField] private Scout scout;
+    public Scout Scout { get { return scout; } }
+    
     [SerializeField]
     private float pathUpdateRate = 1.0f;
     public float PathUpdateRate { get { return pathUpdateRate; } }
@@ -117,6 +125,8 @@ public class Unit : MonoBehaviour
     
     [SerializeField]
     private Unit curEnemyUnitTarget;
+    [SerializeField]
+    public Unit curAllyTarget;
     
     [SerializeField]
     private Building curEnemyBuildingTarget;
@@ -126,6 +136,9 @@ public class Unit : MonoBehaviour
 
     [SerializeField]
     private float lastAttackTime;
+    
+    [SerializeField] private Unit inProgressHealing; // The building a unit is currently Healing
+    public Unit InProgressHealing { get { return inProgressHealing; } set { inProgressHealing = value; } }
     
     //Auto Attack
     [SerializeField] private float defendRange = 30f; //the range that a unit will defensively auto-attack
@@ -142,6 +155,8 @@ public class Unit : MonoBehaviour
             worker = GetComponent<Worker>();
         if (IsDocter)
             docter = GetComponent<Docter>();
+        if (IsScout)
+            worker = GetComponent<Worker>();
     }
     
     void Update()
@@ -157,6 +172,10 @@ public class Unit : MonoBehaviour
             case UnitState.MoveToEnemyBuilding: MoveToEnemyBuildingUpdate(); 
                 break;
             case UnitState.AttackBuilding: AttackBuildingUpdate(); 
+                break;
+            case UnitState.MoveToHeal : MoveToHeal();
+                break;
+            case UnitState.HealProgress: HealProgress();
                 break;
         }
     }// Update is called once per frame
@@ -183,7 +202,6 @@ public class Unit : MonoBehaviour
             navAgent.SetDestination(dest); 
             navAgent.isStopped = false;
         }
-        
         SetState(UnitState.Move);
     }
 
@@ -234,6 +252,14 @@ public class Unit : MonoBehaviour
         SetState(UnitState.MoveToEnemy);
     }
     
+    public void ToHealUnit(Unit ally)
+    {
+        if (curHP <= 0 || state == UnitState.Die)
+            return;
+        curAllyTarget = ally;
+        SetState(UnitState.MoveToHeal);
+    }
+    
     // called when an enemy unit attacks us
     public void TakeDamage(Unit enemy, int damage)
     {
@@ -249,10 +275,29 @@ public class Unit : MonoBehaviour
             Die();
         }
 
-        if (!IsWorker) //if this unit is not worker
+        if (!IsWorker) //if this unit is not worker and Scout
             ToAttackUnit(enemy); //always counter-attack
     }
 
+    // called when an enemy unit attacks us
+    public void TakeHeal(Unit ally, int damage)
+    {
+        //I'm already dead
+        if (curHP <= 0 || state == UnitState.Die)
+            return;
+
+        curHP += damage;
+
+        if (curHP <= 0)
+        {
+            curHP = 0;
+            Die();
+        }
+
+        if (!IsWorker) //if this unit is not worker and Scout
+            ToAttackUnit(ally); //always counter-attack
+    }
+    
     // called every frame the 'MoveToEnemy' state is active
     public void MoveToEnemyUpdate()
     {
@@ -269,10 +314,63 @@ public class Unit : MonoBehaviour
 
             if (curEnemyUnitTarget != null)
                 navAgent.SetDestination(curEnemyUnitTarget.transform.position);
+            
         }
 
         if (Vector3.Distance(transform.position, curEnemyUnitTarget.transform.position) <= WeaponRange)
             SetState(UnitState.AttackUnit);
+    }
+    
+    public void MoveToHeal()
+    {
+        // if our target is null, go idle
+        if (curAllyTarget == null)
+        {
+            SetState(UnitState.Idle);
+            return;
+        }
+        if (Time.time - lastPathUpdateTime > pathUpdateRate)
+        {
+            lastPathUpdateTime = Time.time;
+            navAgent.isStopped = false;
+
+            if (curAllyTarget != null)
+                navAgent.SetDestination(curAllyTarget.transform.position);
+            
+        }
+
+        if (Vector3.Distance(transform.position, curAllyTarget.transform.position) <= WeaponRange)
+            SetState(UnitState.HealProgress);
+    }
+    
+    protected void HealProgress()
+    {
+        // if our ally dead
+        if (curAllyTarget == null || curAllyTarget.CurHP <= 0)
+        {
+            SetState(UnitState.Idle);
+            return;
+        }
+
+        // still moving, stop
+        if (!navAgent.isStopped)
+            navAgent.isStopped = true;
+
+        // look at the Ally
+        LookAt(curAllyTarget.transform.position);
+
+        // Heal every Rate per seconds
+        if (Time.time - lastAttackTime > attackRate)
+        {
+            lastAttackTime = Time.time;
+            curAllyTarget.TakeHeal(this, UnityEngine.Random.Range(minWpnDamage, maxWpnDamage + 1));
+        }
+
+        // move towards the Ally
+        if (Vector3.Distance(transform.position, curAllyTarget.transform.position) > weaponRange)
+        {
+            SetState(UnitState.MoveToHeal);
+        }
     }
     
     // called every frame the 'Attack' state is active
@@ -396,6 +494,10 @@ public class Unit : MonoBehaviour
         if (!IsWorker) //if this unit is not worker
             ToAttackTurret(turret); //counter-attack at turret
     }
-    
+
+    public void GetVisualRange(float renge)
+    {
+        visualRange = renge;
+    }
     
 }

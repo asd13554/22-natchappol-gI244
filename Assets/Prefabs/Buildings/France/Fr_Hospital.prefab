@@ -416,7 +416,7 @@ MonoBehaviour:
   isFunctional: 1
   isHQ: 0
   isHousing: 0
-  isBarrack: 1
+  isBarrack: 0
   intoTheGround: 5
 --- !u!65 &8993794003166467213
 BoxCollider:

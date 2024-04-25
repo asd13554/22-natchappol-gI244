@@ -84,6 +84,10 @@ public class UnitCommand : MonoBehaviour
         {
             if (u.IsWorker)
                 u.Worker.ToGatherResource(resource, resource.transform.position);
+            else if (u.IsScout)
+            {
+                u.Worker.ToHide(resource, resource.transform.position);
+            }
             else
                 u.MoveToPosition(resource.transform.position);
         }
@@ -102,6 +106,14 @@ public class UnitCommand : MonoBehaviour
             u.ToAttackUnit(enemy);
         }
     }
+
+    private void UnitHealAlly(Unit ally, List<Unit> units)
+    {
+        foreach (Unit u in units)
+        {
+            u.ToHealUnit(ally);
+        }
+    }
     
     private void CommandToUnit(RaycastHit hit, List<Unit> units)
     {
@@ -112,11 +124,12 @@ public class UnitCommand : MonoBehaviour
 
         if (target.Faction == GameManager.instance.EnemyFaction)// if it is our enemy
             UnitAttackEnemy(target, units);
-        else
+        else if (target.Faction == GameManager.instance.MyFaction)
         {
+            UnitHealAlly(target, units);
             if (target.CurHP < target.MaxHP)
             {
-                HelpHealing(target, units);
+                //HelpHealing(target, units);
                 StartCoroutine(Formula.BlinkSelection(target.SelectionVisual));
             }
         }
@@ -160,12 +173,12 @@ public class UnitCommand : MonoBehaviour
         }
     }
     
-    private void HelpHealing(Unit ally, List<Unit> units)
-    {
-        foreach (Unit u in units)
-        {
-            if (u.IsDocter)
-                u.Docter.DocterStartHealing(ally);
-        }
-    }
+    // private void HelpHealing(Unit ally, List<Unit> units)
+    // {
+    //     foreach (Unit u in units)
+    //     {
+    //         if (u.IsDocter)
+    //             u.Docter.DocterStartHealing(ally);
+    //     }
+    // }
 }

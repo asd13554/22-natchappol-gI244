@@ -1,15 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Docter : MonoBehaviour
 {
     [SerializeField] private Unit inProgressHealing; // The building a unit is currently building
     public Unit InProgressHealing { get { return inProgressHealing; } set { inProgressHealing = value; } }
     
-    private float timer = 0f; //Constructing timer
+    private float timer = 0f; //Heal timer
     public float Timer { get { return timer; } set { timer = value; } }
-    private float waitTime = 0.5f; //How fast it will be construct, higher is longer
+    private float waitTime = 0.5f; //How fast it will be Heal, higher is longer
     public float WaitTime { get { return waitTime; } set { waitTime = value; } }
     
     private Unit unit;
@@ -26,15 +28,15 @@ public class Docter : MonoBehaviour
         if (unit.State == UnitState.Die)
             return;
 
-        switch (unit.State)
-        {
-            case UnitState.MoveToHeal :
-                MoveToHeal(inProgressHealing);
-                break;
-            case UnitState.HealProgress:
-                HealProgress();
-                break;
-        }
+        // switch (unit.State)
+        // {
+        //     case UnitState.MoveToHeal :
+        //         MoveToHeal(inProgressHealing);
+        //         break;
+        //     case UnitState.HealProgress:
+        //         HealProgress();
+        //         break;
+        // }
     }
     
     

@@ -35,6 +35,7 @@ public class UnitAnimation : MonoBehaviour
         anim.SetBool("IsDie",false);
         anim.SetBool("IsMoveToHeal",false);
         anim.SetBool("IsHealProgress",false);
+        anim.SetBool("IsInvisible",false);
 
         switch (u.State)
         {
@@ -79,6 +80,9 @@ public class UnitAnimation : MonoBehaviour
                 break;
             case UnitState.HealProgress:
                 anim.SetBool("IsHealProgress", true);
+                break;
+            case UnitState.Invisible:
+                anim.SetBool("IsInvisible", true);
                 break;
         }
     }

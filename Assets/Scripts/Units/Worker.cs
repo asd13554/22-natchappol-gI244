@@ -25,7 +25,8 @@ public class Worker : MonoBehaviour
     [SerializeField]
     private ResourceType carryType;
     public ResourceType CarryType { get { return carryType; } set { carryType = value; } }
-
+    
+    private Collider Col;
     private float lastGatherTime;
     private Unit unit;
     
@@ -33,6 +34,7 @@ public class Worker : MonoBehaviour
     void Start()
     {
         unit = GetComponent<Unit>();
+        Col = GetComponent<Collider>();
     }
 
     // Update is called once per frame
@@ -52,6 +54,10 @@ public class Worker : MonoBehaviour
             case UnitState.StoreAtHQ:
                 StoreAtHQUpdate();
                 break;
+            case UnitState.Invisible:
+                Invisible();
+                break;
+            
         }
     }
     
@@ -72,20 +78,76 @@ public class Worker : MonoBehaviour
         unit.NavAgent.SetDestination(pos);
     }
     
+    public void ToHide(ResourceSource resource, Vector3 pos)
+    {
+        curResourceSource = resource;
+        
+        unit.SetState(UnitState.MoveToResource);
+
+        unit.NavAgent.isStopped = false;
+        unit.NavAgent.SetDestination(pos);
+    }
+    
     private void MoveToResourceUpdate()
     {
         CheckForResource();
         
+        if (unit == unit.IsScout)
+            MoveToHideUpdate();
+        else
+        {
+            if (Vector3.Distance(transform.position, unit.NavAgent.destination) <= 2f)
+            {
+                if (curResourceSource != null)
+                {
+                    unit.LookAt(curResourceSource.transform.position);
+                    unit.NavAgent.isStopped = true;
+                    unit.SetState(UnitState.Gather);
+                }
+            }
+        }
+    }
+    
+    private void MoveToHideUpdate()
+    {
         if (Vector3.Distance(transform.position, unit.NavAgent.destination) <= 2f)
         {
             if (curResourceSource != null)
             {
                 unit.LookAt(curResourceSource.transform.position);
                 unit.NavAgent.isStopped = true;
-                unit.SetState(UnitState.Gather);
+                HidingUpdate();
             }
         }
     }
+    
+    private void HidingUpdate()
+    {
+        Unit range = GetComponent<Unit>();
+        Col.enabled = !Col.enabled;
+        unit.SetState(UnitState.Invisible);
+    }
+    
+    private void UnitRangeUP(float scout, List<Unit> units)
+    {
+        foreach (Unit u in units)
+        {
+            scout = 150;
+            u.GetVisualRange(scout);
+        }
+    }
+    
+    private void Invisible()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Col.enabled = !Col.enabled;
+            
+            unit.SetState(UnitState.Idle);
+            curResourceSource = null; //Clear this job off his mind
+        }
+    }
+    
     
     private void GatherUpdate()
     {
@@ -109,7 +171,7 @@ public class Worker : MonoBehaviour
                 unit.SetState(UnitState.DeliverToHQ);
         }
     }
-    
+
     private void DeliverToHQUpdate()
     {
         if (Time.time - unit.LastPathUpdateTime > unit.PathUpdateRate)
@@ -119,9 +181,6 @@ public class Worker : MonoBehaviour
             unit.NavAgent.SetDestination(unit.Faction.GetHQSpawnPos());
             unit.NavAgent.isStopped = false;
         }
-
-        if (Vector3.Distance(transform.position, unit.Faction.GetHQSpawnPos()) <= 1f)
-            unit.SetState(UnitState.StoreAtHQ);
     }
     
     private void StoreAtHQUpdate()
