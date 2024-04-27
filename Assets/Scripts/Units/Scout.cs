@@ -42,15 +42,15 @@ public class Scout : MonoBehaviour
             case UnitState.MoveToResource:
                 MoveToResourceUpdate();
                 break;
-            case UnitState.Gather:
-                GatherUpdate();
-                break;
-            case UnitState.DeliverToHQ:
-                DeliverToHQUpdate();
-                break;
-            case UnitState.StoreAtHQ:
-                StoreAtHQUpdate();
-                break;
+            // case UnitState.Gather:
+            //     GatherUpdate();
+            //     break;
+            // case UnitState.DeliverToHQ:
+            //     DeliverToHQUpdate();
+            //     break;
+            // case UnitState.StoreAtHQ:
+            //     StoreAtHQUpdate();
+            //     break;
         }
     }
     

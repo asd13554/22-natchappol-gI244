@@ -148,7 +148,7 @@ public class Building : Structure
 
         if (IsHousing)
             faction.UpdateHousingLimit();
-
+        
         base.Die();
 
         //Check Victory Condition

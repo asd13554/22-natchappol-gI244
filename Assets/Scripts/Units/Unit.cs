@@ -177,6 +177,8 @@ public class Unit : MonoBehaviour
                 break;
             case UnitState.HealProgress: HealProgress();
                 break;
+            case UnitState.Invisible: GetVisualRange(150);
+                break;
         }
     }// Update is called once per frame
     
@@ -353,7 +355,7 @@ public class Unit : MonoBehaviour
     protected void HealProgress()
     {
         // if our ally dead
-        if (curAllyTarget == null || curAllyTarget.CurHP <= 0)
+        if (curAllyTarget == null || curAllyTarget.CurHP >= 0)
         {
             SetState(UnitState.Idle);
             return;

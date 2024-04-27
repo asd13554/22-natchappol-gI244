@@ -123,19 +123,19 @@ public class Worker : MonoBehaviour
     
     private void HidingUpdate()
     {
-        Unit range = GetComponent<Unit>();
+        //Unit range = GetComponent<Unit>();
         Col.enabled = !Col.enabled;
         unit.SetState(UnitState.Invisible);
     }
     
-    private void UnitRangeUP(float scout, List<Unit> units)
-    {
-        foreach (Unit u in units)
-        {
-            scout = 150;
-            u.GetVisualRange(scout);
-        }
-    }
+    // private void UnitRangeUP(float scout, List<Unit> units)
+    // {
+    //     foreach (Unit u in units)
+    //     {
+    //         scout = 150;
+    //         u.GetVisualRange(scout);
+    //     }
+    // }
     
     private void Invisible()
     {

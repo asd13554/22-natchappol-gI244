@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FactionAI : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class FactionAI : MonoBehaviour
 
     private Faction faction;
     private AISupport support = null;
-
+    
     [SerializeField] private Building curHQ;
     [SerializeField] private Building curBarrack;
     [SerializeField] private Building curHospital;
@@ -34,7 +35,7 @@ public class FactionAI : MonoBehaviour
     private void Check()
     {
         if (faction.AliveBuildings.Count == 0) // if all buildings are destroyed, return
-            return;
+            SceneManager.LoadScene(4);
 
         //Create Workers
         if (curHQ != null)
@@ -48,7 +49,9 @@ public class FactionAI : MonoBehaviour
         }
         else
         {
+            
             Debug.Log("End Game Here (FactionAI.cs 51)");
+            
         }
 
         //Create main fighters
@@ -136,4 +139,5 @@ public class FactionAI : MonoBehaviour
                 break;
         }
     }
+    
 }
